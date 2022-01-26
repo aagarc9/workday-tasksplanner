@@ -1,15 +1,15 @@
 let inputValue = document.getElementById("input");
-let button = document.getElementById("btn");
+let button = $(".saveBtn");
 let descr = document.getElementsByClassName("description");
 
 // create local storge after user input
-button.addEventListener('click', function(event) {
+button.on('click', function(event) {
     event.preventDefault();
     text = inputValue.value 
     console.log(text)
     // get the nearby values associated with the textarea
     var text = $(this).siblings('.description').val();
-    var block = $(this).parent().attr(id);
+    var block = $(this).parent().attr("id");
     localStorage.setItem(block, text)
 
     localStorage.setItem('text', text)
@@ -23,15 +23,15 @@ function renderInput() {
 }
 
 // get item method 
-$('#time8 .description').val(localStorage.getItem('text'))
-$('#time9 .description').val(localStorage.getItem('text'))
-$('#time10 .description').val(localStorage.getItem('text'))
-$('#time11 .description').val(localStorage.getItem('text'))
-$('#time12 .description').val(localStorage.getItem('text'))
-$('#time1 .description').val(localStorage.getItem('text'))
-$('#time2 .description').val(localStorage.getItem('text'))
-$('#time3 .description').val(localStorage.getItem('text'))
-$('#time4 .description').val(localStorage.getItem('text'))
+$('#time8 .description').val(localStorage.getItem('time8'))
+$('#time9 .description').val(localStorage.getItem('time9'))
+$('#time10 .description').val(localStorage.getItem('time10'))
+$('#time11 .description').val(localStorage.getItem('time11'))
+$('#time12 .description').val(localStorage.getItem('time12'))
+$('#time1 .description').val(localStorage.getItem('time1'))
+$('#time2 .description').val(localStorage.getItem('time2'))
+$('#time3 .description').val(localStorage.getItem('time3'))
+$('#time4 .description').val(localStorage.getItem('time4'))
 
 
 // time and date for header
