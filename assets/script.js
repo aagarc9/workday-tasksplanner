@@ -7,6 +7,10 @@ button.addEventListener('click', function(event) {
     event.preventDefault();
     text = inputValue.value 
     console.log(text)
+    // get the nearby values associated with the textarea
+    var text = $(this).siblings('.description').val(text);
+    var block = $(this).parent().attr();
+    localStorage.setItem(block, text)
 
     localStorage.setItem('text', text)
     renderInput()
@@ -17,17 +21,18 @@ function renderInput() {
     console.log(tasks)
     descr.textContent = tasks
 }
-// function renderLastRegistered() {
-//     var email = localStorage.getItem("email");
-//     var password = localStorage.getItem("password");
-  
-//     if (!email || !password) {
-//       return;
-//     }
-  
-//     userEmailSpan.textContent = email;
-//     userPasswordSpan.textContent = password;
-//   }
+
+// get item method 
+$('#time8 .description').val(localStorage.getItem('text'))
+$('#time9 .description').val(localStorage.getItem('text'))
+$('#time10 .description').val(localStorage.getItem('text'))
+$('#time11 .description').val(localStorage.getItem('text'))
+$('#time12 .description').val(localStorage.getItem('text'))
+$('#time1 .description').val(localStorage.getItem('text'))
+$('#time2 .description').val(localStorage.getItem('text'))
+$('#time3 .description').val(localStorage.getItem('text'))
+$('#time4 .description').val(localStorage.getItem('text'))
+
 
 // time and date for header
 var today = moment();
@@ -37,6 +42,7 @@ $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
 function timeColor() {
     let currentHour = moment().hour()
     console.log(currentHour)
+    
     if (currentHour > 8) {
         $(".time8").addClass("past");
     } else if (currentHour === 8) {
