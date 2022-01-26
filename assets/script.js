@@ -8,8 +8,8 @@ button.addEventListener('click', function(event) {
     text = inputValue.value 
     console.log(text)
     // get the nearby values associated with the textarea
-    var text = $(this).siblings('.description').val(text);
-    var block = $(this).parent().attr();
+    var text = $(this).siblings('.description').val();
+    var block = $(this).parent().attr(id);
     localStorage.setItem(block, text)
 
     localStorage.setItem('text', text)
