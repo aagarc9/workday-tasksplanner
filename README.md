@@ -25,3 +25,4 @@ For this week's assignment, I needed to complete a workday planner that allows a
 
 ## Links
 https://aagarc9.github.io/workday-tasksplanner/
+<img width="878" alt="Capture" src="https://user-images.githubusercontent.com/92004832/151272457-1d9d2f93-7a54-4382-814f-cf9a5ac7104f.PNG">
